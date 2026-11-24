@@ -1,0 +1,133 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 255 26% 7%;
+    --foreground: 40 28% 96%;
+    --card: 255 22% 10%;
+    --card-foreground: 40 28% 96%;
+    --popover: 255 24% 9%;
+    --popover-foreground: 40 28% 96%;
+    --primary: 42 92% 58%;
+    --primary-foreground: 255 30% 8%;
+    --secondary: 255 16% 16%;
+    --secondary-foreground: 40 28% 96%;
+    --muted: 255 16% 15%;
+    --muted-foreground: 250 10% 66%;
+    --accent: 156 52% 44%;
+    --accent-foreground: 255 30% 8%;
+    --destructive: 0 72% 52%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 255 16% 19%;
+    --input: 255 16% 20%;
+    --ring: 42 92% 58%;
+    --chart-1: 42 92% 58%;
+    --chart-2: 156 52% 44%;
+    --chart-3: 8 78% 58%;
+    --chart-4: 265 60% 62%;
+    --chart-5: 190 70% 52%;
+    --radius: 0.9rem;
+    --font-heading: "Fraunces", ui-serif, Georgia, serif;
+    --font-body: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
+    --font-display: "Fraunces", ui-serif, Georgia, serif;
+    --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+    --sidebar-background: 255 22% 9%;
+    --sidebar-foreground: 40 28% 96%;
+    --sidebar-primary: 42 92% 58%;
+    --sidebar-primary-foreground: 255 30% 8%;
+    --sidebar-accent: 255 16% 16%;
+    --sidebar-accent-foreground: 40 28% 96%;
+    --sidebar-border: 255 16% 19%;
+    --sidebar-ring: 42 92% 58%;
+  }
+
+  .dark {
+    --background: 255 26% 7%;
+    --foreground: 40 28% 96%;
+    --card: 255 22% 10%;
+    --card-foreground: 40 28% 96%;
+    --popover: 255 24% 9%;
+    --popover-foreground: 40 28% 96%;
+    --primary: 42 92% 58%;
+    --primary-foreground: 255 30% 8%;
+    --secondary: 255 16% 16%;
+    --secondary-foreground: 40 28% 96%;
+    --muted: 255 16% 15%;
+    --muted-foreground: 250 10% 66%;
+    --accent: 156 52% 44%;
+    --accent-foreground: 255 30% 8%;
+    --destructive: 0 72% 52%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 255 16% 19%;
+    --input: 255 16% 20%;
+    --ring: 42 92% 58%;
+    --chart-1: 42 92% 58%;
+    --chart-2: 156 52% 44%;
+    --chart-3: 8 78% 58%;
+    --chart-4: 265 60% 62%;
+    --chart-5: 190 70% 52%;
+    --sidebar-background: 255 22% 9%;
+    --sidebar-foreground: 40 28% 96%;
+    --sidebar-primary: 42 92% 58%;
+    --sidebar-primary-foreground: 255 30% 8%;
+    --sidebar-accent: 255 16% 16%;
+    --sidebar-accent-foreground: 40 28% 96%;
+    --sidebar-border: 255 16% 19%;
+    --sidebar-ring: 42 92% 58%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+
+  body {
+    @apply bg-background text-foreground font-body antialiased;
+  }
+
+  ::selection {
+    background: hsl(42 92% 58% / 0.28);
+  }
+}
+
+@layer utilities {
+  .glow-gold {
+    box-shadow: 0 18px 50px -18px hsl(42 92% 58% / 0.55);
+  }
+
+  .text-gold {
+    background-image: linear-gradient(
+      135deg,
+      hsl(46 100% 76%) 0%,
+      hsl(42 95% 60%) 45%,
+      hsl(28 90% 52%) 100%
+    );
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+
+  .app-aura {
+    background:
+      radial-gradient(60% 40% at 15% 0%, hsl(42 92% 58% / 0.14), transparent 70%),
+      radial-gradient(55% 45% at 95% 12%, hsl(156 52% 44% / 0.14), transparent 72%),
+      radial-gradient(70% 55% at 50% 100%, hsl(265 60% 45% / 0.16), transparent 75%);
+  }
+
+  .pattern-weave {
+    background-image:
+      repeating-linear-gradient(45deg, hsl(42 92% 58% / 0.07) 0px, hsl(42 92% 58% / 0.07) 1px, transparent 1px, transparent 10px);
+  }
+
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+}
